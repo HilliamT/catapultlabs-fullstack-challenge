@@ -1,4 +1,5 @@
 import express from "express";
+import monthlyDepositRouter from "./monthly-deposit";
 
 const router = express.Router();
 
@@ -9,6 +10,8 @@ const router = express.Router();
 /*//////////////////////////////////////////////////////////////
                         ENDPOINT DIRECTORIES
 //////////////////////////////////////////////////////////////*/
+
+router.use("/monthly-deposit", monthlyDepositRouter);
 
 /*//////////////////////////////////////////////////////////////
                             ENDPOINTS
