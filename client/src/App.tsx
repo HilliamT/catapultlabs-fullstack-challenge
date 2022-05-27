@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
-import { ChakraProvider, Container } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import DefaultLayout from './components/layouts/Default'
-import LineChart from './components/LineChart'
+import SavingsCalculator from './components/SavingsCalculator'
 
 // Note: This is just for example purposes
 // should be replaced with real data from the server
@@ -17,15 +17,7 @@ function App() {
             {/* We've just bundled everything into one file here to 
             get you started!*/}
             <DefaultLayout>
-                <Container pt={6}>
-                    <LineChart
-                        title="Savings Over time"
-                        xAxisData={tempData.xAxis}
-                        yAxisData={tempData.yAxis}
-                        xLabel="Years"
-                        yLabel="Amount"
-                    />
-                </Container>
+                <SavingsCalculator />
             </DefaultLayout>
         </ChakraProvider>
     )
