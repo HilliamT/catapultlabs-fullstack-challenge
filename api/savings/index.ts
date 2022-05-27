@@ -1,5 +1,4 @@
 import express from "express";
-import savingsRouter from "./savings";
 
 const router = express.Router();
 
@@ -11,14 +10,12 @@ const router = express.Router();
                         ENDPOINT DIRECTORIES
 //////////////////////////////////////////////////////////////*/
 
-router.use("/savings", savingsRouter);
-
 /*//////////////////////////////////////////////////////////////
                             ENDPOINTS
 //////////////////////////////////////////////////////////////*/
 
 router.get("/", (req, res) => {
-  return res.send("Hello World!");
+  return res.send("Hello World to Savings!");
 });
 
 export default router;
