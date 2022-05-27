@@ -1,11 +1,13 @@
 import express from "express";
 import apiRouter from "./api";
+import cors from "cors";
 
 const app = express();
 
 app.set("port", process.env.PORT || 3001);
 
 // API Routes
+app.use(cors());
 app.use("/api", apiRouter);
 
 // Express only serves static assets in production
