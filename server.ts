@@ -1,8 +1,12 @@
 import express from "express";
+import apiRouter from "./api";
 
 const app = express();
 
 app.set("port", process.env.PORT || 3001);
+
+// API Routes
+app.use("/api", apiRouter);
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === "production") {
